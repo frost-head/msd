@@ -1,0 +1,24 @@
+
+It looks like you're starting an `if` statement to check the value of a variable!
+
+You're using `-eq`, which is for comparing numbers. To compare strings, use `==`. Also, remember to end your `if` block with `fi`.
+
+Here's how you'd correctly structure that:
+
+```bash
+#!/bin/bash
+
+mode="copy" # Example: Set the 'mode' variable
+
+if [[ "$mode" == "copy" ]]; then
+    echo "The mode is set to copy."
+    # Your commands for when mode is "copy" go here
+elif [[ "$mode" == "paste" ]]; then
+    echo "The mode is set to paste."
+    # Your commands for when mode is "paste" go here
+else
+    echo "Unknown mode: $mode"
+fi
+```
+
+This snippet checks if the variable `mode` (remember to use `$` to access its value, e.g., `$mode`) is exactly equal to the string "copy". `[[ ]]` is a powerful test construct in bash, and `"$mode"` ensures the variable's value is treated as a single string, even if it contains spaces.

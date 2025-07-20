@@ -54,3 +54,28 @@ Output : 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN gro
        valid_lft forever preferred_lft forever
 ========================================
 
+==============ip address command====================
+frosthead@fedora at /home/frosthead/Projects/msd
+
+Command : ip address
+
+Output : 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eno1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 50:81:40:78:3d:4a brd ff:ff:ff:ff:ff:ff
+    altname enp2s0
+    altname enx508140783d4a
+3: wlo1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 1a:21:43:6e:6e:93 brd ff:ff:ff:ff:ff:ff permaddr f8:89:d2:e6:ab:59
+    altname wlp3s0
+    altname wlxf889d2e6ab59
+    inet 192.168.1.35/24 brd 192.168.1.255 scope global dynamic noprefixroute wlo1
+       valid_lft 76860sec preferred_lft 76860sec
+    inet6 fe80::5a6e:b20d:47cc:67be/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+========================================
+
